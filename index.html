@@ -11,6 +11,12 @@
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
     <link rel="manifest" href="manifest.webmanifest">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap"
+        rel="stylesheet">
+
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -34,10 +40,152 @@
         }
     </script>
 
+    <style>
+        /* BASE STYLES */
+        html,
+        body,
+        ul,
+        li {
+            margin: 0;
+            padding: 0;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Zain', serif;
+        }
+
+        /* CONTENT */
+
+        :root {
+            --bg-color-transparency: 0.3;
+            --white: rgb(220, 220, 220);
+            --content-width: 1024px;
+            --nav-shift: 1rem;
+        }
+
+        body {
+            background: linear-gradient(45deg,
+                    rgba(29, 183, 101, var(--bg-color-transparency)) 0%,
+                    rgba(223, 119, 0, var(--bg-color-transparency)) 33%,
+                    rgba(114, 70, 181, var(--bg-color-transparency)) 67%,
+                    rgba(29, 183, 101, var(--bg-color-transparency)) 100%), black;
+            background-size: 100vw 100vh, auto;
+            color: var(--white);
+            padding: 0 2rem
+        }
+
+        header,
+        section,
+        .hr {
+            max-width: var(--content-width);
+            margin: 0 auto;
+        }
+
+        .hr {
+            border-bottom: 1px dotted var(--white);
+            padding: 1rem 0;
+        }
+
+        header {
+            height: 6rem;
+            line-height: 4rem;
+
+            display: flex;
+            justify-content: space-between;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin: 1rem 0;
+        }
+
+        header ul {
+            list-style: none;
+            display: flex;
+            align-items: end;
+            position: relative;
+            right: -1rem;
+        }
+
+        header nav a {
+            display: block;
+            height: 4rem;
+            margin: 1rem 0;
+            padding: 0 var(--nav-shift);
+        }
+
+        header nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 2*var(--nav-shift) 0;
+        }
+    </style>
+
 </head>
 
 <body>
-    boy, howdy
+
+    <header>
+        <h1>Tucker Bickler</h1>
+        <nav aria-label="main navigation">
+            <ul>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hr"></div>
+
+    <section id="introduction">
+        <div class="introduction-content">
+            <p>Hi, I'm Tucker. I've worked as an engineer pretty much my whole live. Whether that's working with
+                software,
+                machinery, or just building things in the garage, I love learning how things work and making them
+                better.
+            </p>
+        </div>
+    </section>
+
+    <section id="work">
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+        </div>
+    </section>
+
 </body>
 
 </html>
